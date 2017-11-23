@@ -14,4 +14,7 @@ bot.on('message', function(message) {
    let commandUsed = Add.parse(message) || Reset.parse(message) || List.parse(message) || Remove.parse(message) || Help.parse(message);
 });
 
-bot.login('INSERT KEY HERE');
+/**********************************************************************
+ *                   NEVER COMMIT THIS KEY !!                         *
+ *********************************************************************/
+bot.login('INSERT YOUR TOKEN HERE');
