@@ -7,7 +7,7 @@
 
     npm install
     
-Then, replace the "INSERT YOUR TOKEN HERE" in the index.js file by you bot secret token.
+Copy the parameters.js.dist file to parameters.js, then, replace the "INSERT YOUR TOKEN HERE" in the new parameters.js file by you bot secret token.
 
     node index.js
     

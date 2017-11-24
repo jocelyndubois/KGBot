@@ -5,6 +5,7 @@ const Remove = require('./commands/remove');
 const List = require('./commands/list');
 const Reset = require('./commands/reset');
 const Help = require('./commands/help');
+const Parameters = require('./parameters');
 
 bot.on('ready', function(message) {
    bot.user.setGame('Khushas Game');
@@ -17,4 +18,4 @@ bot.on('message', function(message) {
 /**********************************************************************
  *                   NEVER COMMIT THIS KEY !!                         *
  *********************************************************************/
-bot.login('INSERT YOUR TOKEN HERE');
+bot.login(Parameters.secretToken);
