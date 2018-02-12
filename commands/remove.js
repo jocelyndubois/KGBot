@@ -20,13 +20,14 @@ module.exports = class Remove extends Command {
             if (data)
             {
                 let lines = data.split('\n')
-                lines.splice(lines.length - 2)
-                lines = lines.join('\n');
-                lines += '\n';
-                fs.writeFile(that.filename, lines);
-                message.channel.send('Le dernier indice à été supprimé.');
-            } else {
-                message.channel.send('Il n\'y as pas d\'indices !');
+                if (lines.length > 2)
+                {
+                    lines.splice(lines.length - 2)
+                    lines = lines.join('\n');
+                    lines += '\n';
+                    fs.writeFile(that.filename, lines);
+                    message.channel.send('Le dernier indice à été supprimé.');
+                }
             }
         });
     }
