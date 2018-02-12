@@ -20,7 +20,7 @@ module.exports = class Remove extends Command {
             if (data)
             {
                 let lines = data.split('\n')
-                if (lines.length > 2)
+                if (lines.length > 3)
                 {
                     lines.splice(lines.length - 2)
                     lines = lines.join('\n');
