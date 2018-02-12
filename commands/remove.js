@@ -17,12 +17,17 @@ module.exports = class Remove extends Command {
                 console.log(err);
                 // check and handle err
             }
-            let lines = data.split('\n')
-            lines.splice(lines.length - 2)
-            lines = lines.join('\n');
-            lines += '\n';
-            fs.writeFile(that.filename, lines);
-            message.channel.send('Le dernier indice à été supprimé.');
+            if (data)
+            {
+                let lines = data.split('\n')
+                lines.splice(lines.length - 2)
+                lines = lines.join('\n');
+                lines += '\n';
+                fs.writeFile(that.filename, lines);
+                message.channel.send('Le dernier indice à été supprimé.');
+            } else {
+                message.channel.send('Il n\'y as pas d\'indices !');
+            }
         });
     }
 };
